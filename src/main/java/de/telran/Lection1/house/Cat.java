@@ -1,13 +1,13 @@
 package de.telran.Lection1.house;
 
-public class Cat extends Animal {
+public class Cat extends Animal implements Mousetrap{
 
     public Cat(String catName) {
-        this(catName, "white", 1);
+        this(catName, 1, "white");
     }
 
-    public Cat(String catName, String catColour, int catAge) {
-        super(catName, catColour, catAge, true);
+    public Cat(String catName, int catAge, String catColour) {
+        super(catName, catAge, catColour, true);
     }
 
 
@@ -28,5 +28,10 @@ public class Cat extends Animal {
 
     public void meow() {
         System.out.println("Meow!");
+    }
+
+    @Override
+    public void catchMouse(Mouse mouse) {
+        System.out.println("Cat " + getName() + " catch mouse  " + mouse.getName());
     }
 }

@@ -2,8 +2,8 @@ package de.telran.Lection1.house;
 
 public class Dog extends Animal {
 
-    public Dog(String name, String colour, int age) {
-        super(name, colour, age, true);
+    public Dog(String name, int age, String colour) {
+        super(name, age, colour,true);
     }
 
     @Override

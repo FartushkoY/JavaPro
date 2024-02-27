@@ -1,6 +1,6 @@
 package de.telran.Lection1.house;
 
-public class Robot extends Creature{
+public class Robot extends Creature implements Walking, Mousetrap{
     private static int robotCount = 0;
 
     private static final int ROBOT_DEFAULT_VERSION = 1;
@@ -37,4 +37,14 @@ public class Robot extends Creature{
         System.out.println("Hello! I'm Robot. My name is " + super.getClass().getName());
     }
 
+    @Override
+    public void walkAnimal(Animal animal) {
+        System.out.println("Robot " + getName() + " walks with " + animal.getName());
+        animal.setHungry(true);
+    }
+
+    @Override
+    public void catchMouse(Mouse mouse) {
+        System.out.println("Robot " + getName() + " catch mouse  " + mouse.getName());
+    }
 }

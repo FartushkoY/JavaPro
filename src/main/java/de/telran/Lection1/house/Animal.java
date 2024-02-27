@@ -1,17 +1,14 @@
 package de.telran.Lection1.house;
 
-public abstract class Animal extends Creature {
+public abstract class Animal extends Animate {
 
     private String colour;
 
-    private int age;
-
     private boolean isHungry;
 
-    public Animal(String name, String colour, int age, boolean isHungry) {
-        super(name);
+    public Animal(String name, int age, String colour,  boolean isHungry) {
+        super(name, age);
         this.colour = colour;
-        this.age = age;
         this.isHungry = true;
     }
 
@@ -24,12 +21,10 @@ public abstract class Animal extends Creature {
 
     public void displayAnimalInfo() {
         System.out.println("Animal info:");
-        System.out.println(getName() + ", colour: " + colour + ", age: " + age + ", isHungry: " + isHungry);
+        System.out.println(getName() + ", colour: " + colour + ", age: " + getAge() + ", isHungry: " + isHungry);
         sayHello();
         System.out.println("--------------");
     }
-
-
 
     public String getColour() {
         return colour;
@@ -39,13 +34,6 @@ public abstract class Animal extends Creature {
         this.colour = colour;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
 
     public boolean isHungry() {
         return isHungry;

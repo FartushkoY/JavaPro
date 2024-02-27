@@ -1,11 +1,11 @@
 package de.telran.Lection1.house;
 
-public class Human extends Creature {
+public class Human extends Animate implements Walking {
 
     private String name;
 
-    public Human(String name) {
-        super(name);
+    public Human(String name, int age) {
+        super(name, age);
     }
 
     public void feedAnimal(Animal animal) {
@@ -23,6 +23,7 @@ public class Human extends Creature {
         System.out.println("Hello! My name is " + super.getName() + "I am is human.");
     }
 
+    @Override
     public void walkAnimal(Animal animal) {
         System.out.println("Human " + getName() + " walks with " + animal.getName());
         animal.setHungry(true);
