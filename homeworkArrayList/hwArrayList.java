@@ -9,11 +9,9 @@ import java.util.List;
 public class hwArrayList {
     public static void main(String[] args) {
 
-
         List<String> strings = Arrays.asList("I'm", "learning", "java", "and", "I'm", "gonna", "be", "a", "cool", "developer");
 //        1. У вас есть список значений String, вы должны вернуть список количества символов этих String
         System.out.println(getListNumOfLetters(strings));
-
 
 //       2. у вас есть список значений String, вы должны вернуть список со всеми значениями String более трех символов?
         System.out.println(getThreeLetterWords(strings));
@@ -23,11 +21,9 @@ public class hwArrayList {
         List<Integer> listInt1 = Arrays.asList(3, 4, 5, 6, 7, 10, 33, 90);
         System.out.println(getSum(listInt));
 
-
 //        4. у вас есть список значений Integer, вы должны вернуть их максимум
         System.out.println(getMax(listInt));
-
-
+        
 //        5. у вас есть список String, вы должны вернуть максимальную длину String
         System.out.println(getMaxLength(strings));
 
